@@ -45,10 +45,6 @@ export default function ChatPage() {
           <div className="w-[300px] pb-8 sm:w-[400px] md:w-[500px] lg:w-[660px] xl:w-[800px]">
             <ChatInput />
           </div>
-
-          <div className="absolute bottom-2 right-2 hidden md:block lg:bottom-4 lg:right-4">
-            <ChatHelp />
-          </div>
         </div>
       ) : (
         <ChatUI />
