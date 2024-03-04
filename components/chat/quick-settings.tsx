@@ -177,7 +177,7 @@ export const QuickSettings: FC<QuickSettingsProps> = ({}) => {
       }}
     >
       <DropdownMenuTrigger asChild className="max-w-[400px]" disabled={loading}>
-        <Button variant="ghost" className="flex space-x-3 text-lg">
+        <Button variant="ghost" className="flex space-x-3">
           {selectedPreset && (
             <ModelIcon
               provider={modelDetails?.provider || "custom"}
@@ -216,7 +216,7 @@ export const QuickSettings: FC<QuickSettingsProps> = ({}) => {
                   t("Quick Settings")}
               </div>
 
-              <IconChevronDown className="ml-1" />
+              <IconChevronDown className="size-5" />
             </>
           )}
         </Button>

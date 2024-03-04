@@ -21,6 +21,7 @@ import { ModelItem } from "./items/models/model-item"
 import { PresetItem } from "./items/presets/preset-item"
 import { PromptItem } from "./items/prompts/prompt-item"
 import { ToolItem } from "./items/tools/tool-item"
+import { useTranslation } from "react-i18next"
 
 interface SidebarDataListProps {
   contentType: ContentType
@@ -43,6 +44,7 @@ export const SidebarDataList: FC<SidebarDataListProps> = ({
     setTools,
     setModels
   } = useContext(ChatbotUIContext)
+  const { t } = useTranslation()
 
   const divRef = useRef<HTMLDivElement>(null)
 
@@ -278,7 +280,7 @@ export const SidebarDataList: FC<SidebarDataListProps> = ({
                       sortedData.length > 0 && (
                         <div key={dateCategory} className="pb-2">
                           <div className="text-muted-foreground mb-1 text-sm font-bold">
-                            {dateCategory}
+                            {t(dateCategory)}
                           </div>
 
                           <div

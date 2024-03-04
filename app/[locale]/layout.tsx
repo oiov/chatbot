@@ -10,11 +10,12 @@ import { Inter } from "next/font/google"
 import { cookies } from "next/headers"
 import { ReactNode } from "react"
 import "./globals.css"
+import GoogleAnalytics from "./GoogleAnalytics"
 
 const inter = Inter({ subsets: ["latin"] })
-const APP_NAME = "Chatbot UI"
-const APP_DEFAULT_TITLE = "Chatbot UI"
-const APP_TITLE_TEMPLATE = "%s - Chatbot UI"
+const APP_NAME = "OiChat"
+const APP_DEFAULT_TITLE = "OiChat"
+const APP_TITLE_TEMPLATE = "%s - OiChat"
 const APP_DESCRIPTION = "Chabot UI PWA!"
 
 interface RootLayoutProps {
@@ -101,6 +102,7 @@ export default async function RootLayout({
             </div>
           </TranslationsProvider>
         </Providers>
+        <GoogleAnalytics />
       </body>
     </html>
   )

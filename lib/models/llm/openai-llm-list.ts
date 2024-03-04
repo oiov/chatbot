@@ -44,4 +44,29 @@ const GPT3_5Turbo: LLM = {
   imageInput: false
 }
 
-export const OPENAI_LLM_LIST: LLM[] = [GPT4Turbo, GPT4Vision, GPT4, GPT3_5Turbo]
+const GPT3_5Turbo1106: LLM = {
+  modelId: "gpt-3.5-turbo-1106",
+  modelName: "GPT-3.5 Turbo 1106",
+  provider: "openai",
+  hostedId: "gpt-3.5-turbo-1106",
+  platformLink: OPENAI_PLATORM_LINK,
+  imageInput: false
+}
+
+const GPT3_5Turbo16k: LLM = {
+  modelId: "gpt-3.5-turbo-16k",
+  modelName: "GPT-3.5 Turbo 16k",
+  provider: "openai",
+  hostedId: "gpt-3.5-turbo-16k",
+  platformLink: OPENAI_PLATORM_LINK,
+  imageInput: false
+}
+
+export const OPENAI_LLM_LIST: LLM[] = [
+  GPT4Turbo,
+  GPT4Vision,
+  GPT4,
+  GPT3_5Turbo,
+  GPT3_5Turbo1106,
+  GPT3_5Turbo16k
+]
