@@ -45,8 +45,9 @@ export default function HomePage() {
           <div>Oi Chat</div>
         </div>
         <div className="mt-2 text-lg font-bold opacity-100 transition-all duration-500 md:mt-6 md:text-2xl">
-          Chat with Gemini Pro Vision.
+          Chat with Gemini & GPT-4.
         </div>
+        <div className="mt-2 text-sm">反馈交流群 634323049</div>
         <div className="mt-5 flex flex-col items-center space-y-2 md:mt-6 md:flex-row md:space-x-4 md:space-y-0">
           <Link
             className="flex cursor-pointer items-center rounded-lg border-2 border-blue-500 bg-blue-500 p-2 pl-3.5 text-lg font-extrabold tracking-wide text-white hover:opacity-50"
@@ -61,7 +62,6 @@ export default function HomePage() {
         <div className="flex items-center space-x-2">
           <ThemeSwitcher />
         </div>
-        <div className="flex space-x-3 text-sm">交流群 634323049</div>
       </div>
     </div>
   )
