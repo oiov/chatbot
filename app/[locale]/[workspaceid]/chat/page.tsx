@@ -30,6 +30,10 @@ export default function ChatPage() {
         <div className="relative flex h-full flex-col items-center justify-center">
           <div className="top-50% left-50% -translate-x-50% -translate-y-50% absolute mb-20">
             <Brand theme={theme === "dark" ? "dark" : "light"} />
+            <div className="mt-2 text-sm font-semibold text-blue-400">
+              🎉 右上角切换为 GPT-4 模型开始免费体验
+            </div>
+            <div className="mt-2 text-center text-sm">反馈交流群 634323049</div>
           </div>
 
           <div className="absolute left-2 top-2">
