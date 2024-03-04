@@ -14,23 +14,16 @@ export default function HomePage() {
       <div className="flex items-center justify-between">
         <div className="relative flex items-center space-x-4">
           <div className="absolute left-0 top-[-16px] md:top-[-2px]">
-            <ChatbotUISVG theme={"dark"} scale={0.2} />
+            <ChatbotUISVG
+              theme={theme === "dark" ? "dark" : "light"}
+              scale={0.2}
+            />
           </div>
           <div className="hidden pl-9 text-2xl font-extrabold md:block">
             OiChat
           </div>
         </div>
         <div className="flex items-center space-x-8">
-          {/* <div className="space-x-4 md:space-x-8 md:text-lg">
-            <a
-              className="cursor-pointer hover:opacity-50"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://twitter.com/yesmoree"
-            >
-              Contact
-            </a>
-          </div> */}
           <div className="flex space-x-4">
             <a
               className="text-md border-primary bg-primary text-secondary flex h-[36px] w-[90px] cursor-pointer items-center justify-center rounded-lg border-2 p-2 font-semibold hover:opacity-50"
@@ -68,30 +61,7 @@ export default function HomePage() {
         <div className="flex items-center space-x-2">
           <ThemeSwitcher />
         </div>
-        <div className="flex space-x-3">
-          <a
-            className="cursor-pointer hover:opacity-50"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://twitter.com/yesmoree"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              className="tabler-icon tabler-icon-brand-x"
-            >
-              <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
-              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
-            </svg>
-          </a>
-        </div>
+        <div className="flex space-x-3 text-sm">交流群 634323049</div>
       </div>
     </div>
   )
