@@ -31,12 +31,6 @@ export default function HomePage() {
             >
               Login
             </a>
-            <a
-              className="text-md flex h-[36px] w-[90px] cursor-pointer items-center justify-center rounded-lg border-2 border-blue-500 bg-blue-500 p-2 font-semibold text-white hover:opacity-50"
-              href="login"
-            >
-              Sign up
-            </a>
           </div>
         </div>
       </div>

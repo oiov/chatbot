@@ -212,7 +212,11 @@ export default async function Login({
 
         {searchParams?.message && (
           <p className="bg-foreground/10 text-foreground mt-4 p-4 text-center">
-            {searchParams.message}
+            {searchParams.message === "Invalid login credentials"
+              ? "账户未注册或密码错误"
+              : searchParams.message === "Email not confirmed"
+                ? "账户未验证，请检查邮箱并点击验证链接"
+                : searchParams.message}
           </p>
         )}
       </form>
