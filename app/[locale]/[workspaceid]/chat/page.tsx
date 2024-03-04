@@ -10,6 +10,7 @@ import { Brand } from "@/components/ui/brand"
 import { ChatbotUIContext } from "@/context/context"
 import useHotkey from "@/lib/hooks/use-hotkey"
 import { useTheme } from "next-themes"
+import Link from "next/link"
 import { useContext } from "react"
 
 export default function ChatPage() {
@@ -33,6 +34,13 @@ export default function ChatPage() {
             <div className="mt-2 text-sm font-semibold text-blue-400">
               🎉 右上角切换为 GPT-4 模型开始免费体验
             </div>
+            <Link
+              href="https://dev.yesmore.cc/articles/llk"
+              target="_blank"
+              className="mt-2 block text-center text-sm font-semibold text-blue-400"
+            >
+              #️⃣ 29元月租 185G 大流量卡免费领
+            </Link>
             <div className="mt-2 text-center text-sm">反馈交流群 634323049</div>
           </div>
 

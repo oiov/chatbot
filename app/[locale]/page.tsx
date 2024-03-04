@@ -41,7 +41,14 @@ export default function HomePage() {
         <div className="mt-2 text-lg font-bold opacity-100 transition-all duration-500 md:mt-6 md:text-2xl">
           Chat with Gemini & GPT-4.
         </div>
-        <div className="mt-2 text-sm">反馈交流群 634323049</div>
+
+        <Link
+          href="https://dev.yesmore.cc/articles/llk"
+          target="_blank"
+          className="mt-2 text-center text-sm text-blue-400"
+        >
+          #️⃣ 29元月租 185G 大流量卡免费领
+        </Link>
         <div className="mt-5 flex flex-col items-center space-y-2 md:mt-6 md:flex-row md:space-x-4 md:space-y-0">
           <Link
             className="flex cursor-pointer items-center rounded-lg border-2 border-blue-500 bg-blue-500 p-2 pl-3.5 text-lg font-extrabold tracking-wide text-white hover:opacity-50"
@@ -56,6 +63,7 @@ export default function HomePage() {
         <div className="flex items-center space-x-2">
           <ThemeSwitcher />
         </div>
+        <div className="mt-2 text-sm">反馈交流群 634323049</div>
       </div>
     </div>
   )
