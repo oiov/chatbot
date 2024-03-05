@@ -216,7 +216,10 @@ export default async function Login({
               ? "账户未注册或密码错误"
               : searchParams.message === "Email not confirmed"
                 ? "账户未验证，请检查邮箱并点击验证链接"
-                : searchParams.message}
+                : searchParams.message ===
+                    "Unable to validate email address: invalid format"
+                  ? "邮箱地址无效"
+                  : searchParams.message}
           </p>
         )}
       </form>
