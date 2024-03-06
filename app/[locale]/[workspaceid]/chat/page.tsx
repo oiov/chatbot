@@ -34,13 +34,16 @@ export default function ChatPage() {
             <div className="mt-2 text-sm font-semibold text-blue-400">
               🎉 右上角切换为 GPT-4 模型开始免费体验
             </div>
-            <Link
+            <div className="mt-2 text-center text-sm font-semibold text-yellow-400">
+              🔔 首次注册完成后需刷新网页即可切换模型
+            </div>
+            {/* <Link
               href="https://dev.yesmore.cc/articles/llk"
               target="_blank"
               className="mt-2 block text-center text-sm font-semibold text-blue-400"
             >
               #️⃣ 29元月租 185G 大流量卡免费领
-            </Link>
+            </Link> */}
             <div className="mt-2 text-center text-sm">反馈交流群 634323049</div>
           </div>
 
