@@ -16,7 +16,7 @@ const inter = Inter({ subsets: ["latin"] })
 const APP_NAME = "OiChat"
 const APP_DEFAULT_TITLE = "OiChat"
 const APP_TITLE_TEMPLATE = "%s - OiChat"
-const APP_DESCRIPTION = "Chabot UI PWA!"
+const APP_DESCRIPTION = "Free ChatGPT"
 
 interface RootLayoutProps {
   children: ReactNode

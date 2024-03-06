@@ -221,7 +221,9 @@ export default async function Login({
                   ? "邮箱地址无效"
                   : searchParams.message === "Error sending confirmation mail"
                     ? "发送验证邮件失败，请联系管理员处理"
-                    : searchParams.message}
+                    : searchParams.message === "fetch failed"
+                      ? "出错了，请重试"
+                      : searchParams.message}
           </p>
         )}
       </form>

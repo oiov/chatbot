@@ -5,10 +5,7 @@ interface ChatbotUISVGProps {
   scale?: number
 }
 
-export const ChatbotUISVG: FC<ChatbotUISVGProps> = ({
-  theme = "dark",
-  scale = 1
-}) => {
+export const ChatbotUISVG: FC<ChatbotUISVGProps> = ({ theme, scale = 1 }) => {
   return (
     <svg
       width={189 * scale}

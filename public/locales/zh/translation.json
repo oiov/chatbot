@@ -5,5 +5,18 @@
   "Yesterday": "昨天",
   "Previous Week": "上周",
   "Older": "更早",
-  "Start Chatting": "开始聊天"
+  "Start Chatting": "开始聊天",
+  "Set API Keys (optional)": "设置 API 密钥 (可跳过)",
+  "Enter API keys for each service you'd like to use.": "输入每个你想使用的服务的 API 密钥。",
+  "Let's create your profile.": "创建你的偏好设置",
+  "Welcome to OiChat": "欢迎使用 OiChat",
+  "You are all set up!": "你完成了所有初始配置！",
+  "Setup Complete": "初始配置完成",
+  "Click next to start chatting.": "点击下一步开始聊天",
+  "Username": "用户名",
+  "AVAILABLE": "可用",
+  "UNAVAILABLE": "不可用",
+  "Chat Display Name": "聊天展示昵称",
+  "Back": "上一步",
+  "Next": "下一步"
 }

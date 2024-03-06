@@ -72,9 +72,9 @@ export const ChatSettings: FC<ChatSettingsProps> = ({}) => {
           className="flex items-center space-x-2"
           variant="ghost"
         >
-          <div className="">{fullModel?.modelName || chatSettings.model}</div>
+          <div>{fullModel?.modelName || chatSettings.model}</div>
 
-          <IconAdjustmentsHorizontal size={24} />
+          <IconAdjustmentsHorizontal size={22} />
         </Button>
       </PopoverTrigger>
 

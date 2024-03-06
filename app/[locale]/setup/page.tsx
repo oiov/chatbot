@@ -21,6 +21,7 @@ import {
   SETUP_STEP_COUNT,
   StepContainer
 } from "../../../components/setup/step-container"
+import { useTranslation } from "react-i18next"
 
 export default function SetupPage() {
   const {
@@ -34,6 +35,7 @@ export default function SetupPage() {
   } = useContext(ChatbotUIContext)
 
   const router = useRouter()
+  const { t } = useTranslation()
 
   const [loading, setLoading] = useState(true)
 
@@ -57,6 +59,7 @@ export default function SetupPage() {
   const [anthropicAPIKey, setAnthropicAPIKey] = useState("")
   const [googleGeminiAPIKey, setGoogleGeminiAPIKey] = useState("")
   const [mistralAPIKey, setMistralAPIKey] = useState("")
+  const [groqAPIKey, setGroqAPIKey] = useState("")
   const [perplexityAPIKey, setPerplexityAPIKey] = useState("")
   const [openrouterAPIKey, setOpenrouterAPIKey] = useState("")
 
@@ -129,6 +132,7 @@ export default function SetupPage() {
       anthropic_api_key: anthropicAPIKey,
       google_gemini_api_key: googleGeminiAPIKey,
       mistral_api_key: mistralAPIKey,
+      groq_api_key: groqAPIKey,
       perplexity_api_key: perplexityAPIKey,
       openrouter_api_key: openrouterAPIKey,
       use_azure_openai: useAzureOpenai,
@@ -159,9 +163,9 @@ export default function SetupPage() {
       case 1:
         return (
           <StepContainer
-            stepDescription="Let's create your profile."
+            stepDescription={t("Let's create your profile.")}
             stepNum={currentStep}
-            stepTitle="Welcome to OiChat"
+            stepTitle={t("Welcome to OiChat")}
             onShouldProceed={handleShouldProceed}
             showNextButton={!!(username && usernameAvailable)}
             showBackButton={false}
@@ -181,9 +185,11 @@ export default function SetupPage() {
       case 2:
         return (
           <StepContainer
-            stepDescription="Enter API keys for each service you'd like to use."
+            stepDescription={t(
+              "Enter API keys for each service you'd like to use."
+            )}
             stepNum={currentStep}
-            stepTitle="Set API Keys (optional)"
+            stepTitle={t("Set API Keys (optional)")}
             onShouldProceed={handleShouldProceed}
             showNextButton={true}
             showBackButton={true}
@@ -200,6 +206,7 @@ export default function SetupPage() {
               anthropicAPIKey={anthropicAPIKey}
               googleGeminiAPIKey={googleGeminiAPIKey}
               mistralAPIKey={mistralAPIKey}
+              groqAPIKey={groqAPIKey}
               perplexityAPIKey={perplexityAPIKey}
               useAzureOpenai={useAzureOpenai}
               onOpenaiAPIKeyChange={setOpenaiAPIKey}
@@ -213,6 +220,7 @@ export default function SetupPage() {
               onAnthropicAPIKeyChange={setAnthropicAPIKey}
               onGoogleGeminiAPIKeyChange={setGoogleGeminiAPIKey}
               onMistralAPIKeyChange={setMistralAPIKey}
+              onGroqAPIKeyChange={setGroqAPIKey}
               onPerplexityAPIKeyChange={setPerplexityAPIKey}
               onUseAzureOpenaiChange={setUseAzureOpenai}
               openrouterAPIKey={openrouterAPIKey}
@@ -225,9 +233,9 @@ export default function SetupPage() {
       case 3:
         return (
           <StepContainer
-            stepDescription="You are all set up!"
+            stepDescription={t("You are all set up!")}
             stepNum={currentStep}
-            stepTitle="Setup Complete"
+            stepTitle={t("Setup Complete")}
             onShouldProceed={handleShouldProceed}
             showNextButton={true}
             showBackButton={true}
