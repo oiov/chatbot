@@ -219,7 +219,9 @@ export default async function Login({
                 : searchParams.message ===
                     "Unable to validate email address: invalid format"
                   ? "邮箱地址无效"
-                  : searchParams.message}
+                  : searchParams.message === "Error sending confirmation mail"
+                    ? "发送验证邮件失败，请联系管理员处理"
+                    : searchParams.message}
           </p>
         )}
       </form>
