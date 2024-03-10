@@ -36,10 +36,10 @@ export default function HomePage() {
       </div>
       <div className="flex grow flex-col items-center justify-center pb-20">
         <div className="flex flex-col text-4xl font-extrabold tracking-wide md:text-[56px]">
-          <div>Oi Chat</div>
+          <div>OiChat</div>
         </div>
         <div className="mt-2 text-lg font-bold opacity-100 transition-all duration-500 md:mt-6 md:text-2xl">
-          Chat with Gemini & GPT-4.
+          Chat with GPT-4 & Gemini.
         </div>
 
         <Link

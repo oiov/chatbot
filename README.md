@@ -66,21 +66,13 @@ Odds are if you have a question, someone else has the same question.
 
 ## Legacy Code
 
-<<<<<<< HEAD
-OiChat was recently updated to its 2.0 version.
-=======
 Chatbot UI was recently updated to its 2.0 version.
->>>>>>> upstream/main
 
 The code for 1.0 can be found on the `legacy` branch.
 
 ## Updating
 
-<<<<<<< HEAD
-In your terminal at the root of your local OiChat repository, run:
-=======
 In your terminal at the root of your local Chatbot UI repository, run:
->>>>>>> upstream/main
 
 ```bash
 npm run update
@@ -96,11 +88,7 @@ to apply the latest migrations to your live database.
 
 ## Local Quickstart
 
-<<<<<<< HEAD
-Follow these steps to get your own OiChat instance running locally.
-=======
 Follow these steps to get your own Chatbot UI instance running locally.
->>>>>>> upstream/main
 
 You can watch the full video tutorial [here](https://www.youtube.com/watch?v=9Qq3-7-HNgw).
 
@@ -112,11 +100,7 @@ git clone https://github.com/mckaywrigley/chatbot-ui.git
 
 ### 2. Install Dependencies
 
-<<<<<<< HEAD
-Open a terminal in the root directory of your local OiChat repository and run:
-=======
 Open a terminal in the root directory of your local Chatbot UI repository and run:
->>>>>>> upstream/main
 
 ```bash
 npm install
@@ -157,11 +141,7 @@ scoop install supabase
 
 #### 3. Start Supabase
 
-<<<<<<< HEAD
-In your terminal at the root of your local OiChat repository, run:
-=======
 In your terminal at the root of your local Chatbot UI repository, run:
->>>>>>> upstream/main
 
 ```bash
 supabase start
@@ -171,11 +151,7 @@ supabase start
 
 #### 1. Environment Variables
 
-<<<<<<< HEAD
-In your terminal at the root of your local OiChat repository, run:
-=======
 In your terminal at the root of your local Chatbot UI repository, run:
->>>>>>> upstream/main
 
 ```bash
 cp .env.local.example .env.local
@@ -208,31 +184,19 @@ Follow the instructions [here](https://github.com/jmorganca/ollama#macos).
 
 ### 6. Run app locally
 
-<<<<<<< HEAD
-In your terminal at the root of your local OiChat repository, run:
-=======
 In your terminal at the root of your local Chatbot UI repository, run:
->>>>>>> upstream/main
 
 ```bash
 npm run chat
 ```
 
-<<<<<<< HEAD
-Your local instance of OiChat should now be running at [http://localhost:3000](http://localhost:3000). Be sure to use a compatible node version (i.e. v18).
-=======
 Your local instance of Chatbot UI should now be running at [http://localhost:3000](http://localhost:3000). Be sure to use a compatible node version (i.e. v18).
->>>>>>> upstream/main
 
 You can view your backend GUI at [http://localhost:54323/project/default/editor](http://localhost:54323/project/default/editor).
 
 ## Hosted Quickstart
 
-<<<<<<< HEAD
-Follow these steps to get your own OiChat instance running in the cloud.
-=======
 Follow these steps to get your own Chatbot UI instance running in the cloud.
->>>>>>> upstream/main
 
 Video tutorial coming soon.
 
@@ -242,11 +206,7 @@ Repeat steps 1-4 in "Local Quickstart" above.
 
 You will want separate repositories for your local and hosted instances.
 
-<<<<<<< HEAD
-Create a new repository for your hosted instance of OiChat on GitHub and push your code to it.
-=======
 Create a new repository for your hosted instance of Chatbot UI on GitHub and push your code to it.
->>>>>>> upstream/main
 
 ### 2. Setup Backend with Supabase
 
@@ -284,22 +244,14 @@ We recommend turning off "Confirm email" for your own personal instance.
 
 #### 4. Connect to Hosted DB
 
-<<<<<<< HEAD
-Open up your repository for your hosted instance of OiChat.
-=======
 Open up your repository for your hosted instance of Chatbot UI.
->>>>>>> upstream/main
 
 In the 1st migration file `supabase/migrations/20240108234540_setup.sql` you will need to replace 2 values with the values you got above:
 
 - `project_url` (line 53): Use the `Project URL` value from above
 - `service_role_key` (line 54): Use the `Service role key` value from above
 
-<<<<<<< HEAD
-Now, open a terminal in the root directory of your local OiChat repository. We will execute a few commands here.
-=======
 Now, open a terminal in the root directory of your local Chatbot UI repository. We will execute a few commands here.
->>>>>>> upstream/main
 
 Login to Supabase by running:
 
@@ -327,11 +279,7 @@ Your hosted database should now be set up!
 
 Go to [Vercel](https://vercel.com/) and create a new project.
 
-<<<<<<< HEAD
-In the setup page, import your GitHub repository for your hosted instance of OiChat. Within the project Settings, in the "Build & Development Settings" section, switch Framework Preset to "Next.js".
-=======
 In the setup page, import your GitHub repository for your hosted instance of Chatbot UI. Within the project Settings, in the "Build & Development Settings" section, switch Framework Preset to "Next.js".
->>>>>>> upstream/main
 
 In environment variables, add the following from the values you got above:
 
@@ -351,11 +299,7 @@ For the full list of environment variables, refer to the '.env.local.example' fi
 
 Click "Deploy" and wait for your frontend to deploy.
 
-<<<<<<< HEAD
-Once deployed, you should be able to use your hosted instance of OiChat via the URL Vercel gives you.
-=======
 Once deployed, you should be able to use your hosted instance of Chatbot UI via the URL Vercel gives you.
->>>>>>> upstream/main
 
 ## Contributing
 

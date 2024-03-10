@@ -1,6 +1,5 @@
 "use client"
 
-import { ChatHelp } from "@/components/chat/chat-help"
 import { useChatHandler } from "@/components/chat/chat-hooks/use-chat-handler"
 import { ChatInput } from "@/components/chat/chat-input"
 import { ChatSettings } from "@/components/chat/chat-settings"
@@ -10,7 +9,6 @@ import { Brand } from "@/components/ui/brand"
 import { ChatbotUIContext } from "@/context/context"
 import useHotkey from "@/lib/hooks/use-hotkey"
 import { useTheme } from "next-themes"
-import Link from "next/link"
 import { useContext } from "react"
 
 export default function ChatPage() {
@@ -37,13 +35,6 @@ export default function ChatPage() {
             <div className="mt-2 text-center text-sm font-semibold text-yellow-400">
               🔔 首次注册完成后需刷新网页即可切换模型
             </div>
-            {/* <Link
-              href="https://dev.yesmore.cc/articles/llk"
-              target="_blank"
-              className="mt-2 block text-center text-sm font-semibold text-blue-400"
-            >
-              #️⃣ 29元月租 185G 大流量卡免费领
-            </Link> */}
             <div className="mt-2 text-center text-sm">反馈交流群 634323049</div>
           </div>
 
@@ -57,7 +48,7 @@ export default function ChatPage() {
 
           <div className="flex grow flex-col items-center justify-center" />
 
-          <div className="w-[300px] pb-8 sm:w-[400px] md:w-[500px] lg:w-[660px] xl:w-[800px]">
+          <div className="w-[90%] max-w-[800px] pb-8 sm:w-[400px] md:w-[500px] lg:w-[660px]">
             <ChatInput />
           </div>
         </div>
