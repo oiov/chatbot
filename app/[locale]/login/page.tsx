@@ -9,6 +9,7 @@ import { get } from "@vercel/edge-config"
 import { Metadata } from "next"
 import { cookies, headers } from "next/headers"
 import { redirect } from "next/navigation"
+import { useTranslation } from "react-i18next"
 
 export const metadata: Metadata = {
   title: "Login"
@@ -19,6 +20,7 @@ export default async function Login({
 }: {
   searchParams: { message: string }
 }) {
+  // const { t } = useTranslation()
   const cookieStore = cookies()
   const supabase = createServerClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -170,7 +172,7 @@ export default async function Login({
         <Brand />
 
         <Label className="text-md mt-4" htmlFor="email">
-          Email
+          Email 邮箱账号
         </Label>
         <Input
           className="mb-3 rounded-md border bg-inherit px-4 py-2"
@@ -180,7 +182,7 @@ export default async function Login({
         />
 
         <Label className="text-md" htmlFor="password">
-          Password
+          Password 密码
         </Label>
         <Input
           className="mb-6 rounded-md border bg-inherit px-4 py-2"
@@ -190,23 +192,23 @@ export default async function Login({
         />
 
         <SubmitButton className="mb-2 rounded-md bg-blue-700 px-4 py-2 text-white">
-          Login
+          登录
         </SubmitButton>
 
         <SubmitButton
           formAction={signUp}
           className="border-foreground/20 mb-2 rounded-md border px-4 py-2"
         >
-          Sign Up
+          注册
         </SubmitButton>
 
         <div className="text-muted-foreground mt-1 flex justify-center text-sm">
-          <span className="mr-1">Forgot your password?</span>
+          <span className="mr-1">忘记你的密码?</span>
           <button
             formAction={handleResetPassword}
             className="text-primary ml-1 underline hover:opacity-80"
           >
-            Reset
+            点击重置
           </button>
         </div>
 

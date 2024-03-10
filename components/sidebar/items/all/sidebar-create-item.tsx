@@ -27,6 +27,7 @@ import { convertBlobToBase64 } from "@/lib/blob-to-b64"
 import { Tables, TablesInsert } from "@/supabase/types"
 import { ContentType } from "@/types"
 import { FC, useContext, useRef, useState } from "react"
+import { useTranslation } from "react-i18next"
 import { toast } from "sonner"
 
 interface SidebarCreateItemProps {
@@ -60,6 +61,8 @@ export const SidebarCreateItem: FC<SidebarCreateItemProps> = ({
   } = useContext(ChatbotUIContext)
 
   const buttonRef = useRef<HTMLButtonElement>(null)
+
+  const { t } = useTranslation()
 
   const [creating, setCreating] = useState(false)
 
@@ -225,8 +228,10 @@ export const SidebarCreateItem: FC<SidebarCreateItemProps> = ({
         <div className="grow overflow-auto">
           <SheetHeader>
             <SheetTitle className="text-2xl font-bold">
-              Create{" "}
-              {contentType.charAt(0).toUpperCase() + contentType.slice(1, -1)}
+              {t("Create")}
+              {t(
+                contentType.charAt(0).toUpperCase() + contentType.slice(1, -1)
+              )}
             </SheetTitle>
           </SheetHeader>
 
@@ -240,11 +245,11 @@ export const SidebarCreateItem: FC<SidebarCreateItemProps> = ({
               variant="outline"
               onClick={() => onOpenChange(false)}
             >
-              Cancel
+              {t("Cancel")}
             </Button>
 
             <Button disabled={creating} ref={buttonRef} onClick={handleCreate}>
-              {creating ? "Creating..." : "Create"}
+              {creating ? t("Creating...") : t("Create")}
             </Button>
           </div>
         </SheetFooter>

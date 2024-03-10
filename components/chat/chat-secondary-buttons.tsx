@@ -62,7 +62,7 @@ export const ChatSecondaryButtons: FC<ChatSecondaryButtonsProps> = ({}) => {
             delayDuration={200}
             display={<div>Start a new chat</div>}
             trigger={
-              <div className="mt-1">
+              <div className="ml-2 mt-1">
                 <IconMessagePlus
                   className="cursor-pointer hover:opacity-50"
                   size={24}

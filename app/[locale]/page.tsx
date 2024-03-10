@@ -5,9 +5,11 @@ import { ThemeSwitcher } from "@/components/utility/theme-switcher"
 import { IconArrowRight } from "@tabler/icons-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
+import { useTranslation } from "react-i18next"
 
 export default function HomePage() {
   const { theme } = useTheme()
+  const { t } = useTranslation()
 
   return (
     <div className="flex h-[100vh] w-[100vw] flex-col p-6">
@@ -29,7 +31,7 @@ export default function HomePage() {
               className="text-md border-primary bg-primary text-secondary flex h-[36px] w-[90px] cursor-pointer items-center justify-center rounded-lg border-2 p-2 font-semibold hover:opacity-50"
               href="login"
             >
-              Login
+              {t("Login")}
             </a>
           </div>
         </div>
@@ -39,7 +41,7 @@ export default function HomePage() {
           <div>OiChat</div>
         </div>
         <div className="mt-2 text-lg font-bold opacity-100 transition-all duration-500 md:mt-6 md:text-2xl">
-          Chat with GPT-4 & Gemini.
+          {t("Chat with GPT-4 & Gemini.")}
         </div>
 
         <Link
@@ -54,7 +56,7 @@ export default function HomePage() {
             className="flex cursor-pointer items-center rounded-lg border-2 border-blue-500 bg-blue-500 p-2 pl-3.5 text-lg font-extrabold tracking-wide text-white hover:opacity-50"
             href="/login"
           >
-            Start Chatting
+            {t("Start Chatting")}
             <IconArrowRight className="ml-1" size={20} />
           </Link>
         </div>

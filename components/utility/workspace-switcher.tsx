@@ -16,10 +16,13 @@ import { useRouter } from "next/navigation"
 import { FC, useContext, useEffect, useState } from "react"
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
+import { useTranslation } from "react-i18next"
 
 interface WorkspaceSwitcherProps {}
 
 export const WorkspaceSwitcher: FC<WorkspaceSwitcherProps> = ({}) => {
+  const { t } = useTranslation()
+
   useHotkey(";", () => setOpen(prevState => !prevState))
 
   const {
@@ -60,7 +63,7 @@ export const WorkspaceSwitcher: FC<WorkspaceSwitcherProps> = ({}) => {
         selectedWorkspace.include_workspace_instructions,
       instructions: selectedWorkspace.instructions,
       is_home: false,
-      name: "New Workspace"
+      name: t("New Workspace")
     })
 
     setWorkspaces([...workspaces, createdWorkspace])
@@ -138,7 +141,7 @@ export const WorkspaceSwitcher: FC<WorkspaceSwitcherProps> = ({}) => {
             onClick={handleCreateWorkspace}
           >
             <IconPlus />
-            <div className="ml-2">New Workspace</div>
+            <div className="ml-2">{t("New Workspace")}</div>
           </Button>
 
           <Input
@@ -165,20 +168,18 @@ export const WorkspaceSwitcher: FC<WorkspaceSwitcherProps> = ({}) => {
                   >
                     {image ? (
                       <Image
-                        style={{ width: "28px", height: "28px" }}
+                        style={{ width: "20px", height: "20px" }}
                         className="mr-3 rounded"
                         src={image.url || ""}
-                        width={28}
-                        height={28}
+                        width={20}
+                        height={20}
                         alt={workspace.name}
                       />
                     ) : (
-                      <IconHome className="mr-3" size={28} />
+                      <IconHome className="mr-3" size={20} />
                     )}
 
-                    <div className="text-lg font-semibold">
-                      {workspace.name}
-                    </div>
+                    <div className="font-semibold">{workspace.name}</div>
                   </Button>
                 )
               })}
@@ -204,20 +205,18 @@ export const WorkspaceSwitcher: FC<WorkspaceSwitcherProps> = ({}) => {
                   >
                     {image ? (
                       <Image
-                        style={{ width: "28px", height: "28px" }}
+                        style={{ width: "20px", height: "20px" }}
                         className="mr-3 rounded"
                         src={image.url || ""}
-                        width={28}
-                        height={28}
+                        width={20}
+                        height={20}
                         alt={workspace.name}
                       />
                     ) : (
-                      <IconBuilding className="mr-3" size={28} />
+                      <IconBuilding className="mr-3" size={20} />
                     )}
 
-                    <div className="text-lg font-semibold">
-                      {workspace.name}
-                    </div>
+                    <div className="font-semibold">{workspace.name}</div>
                   </Button>
                 )
               })}

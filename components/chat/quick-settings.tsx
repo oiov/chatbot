@@ -20,7 +20,6 @@ import {
 } from "../ui/dropdown-menu"
 import { Input } from "../ui/input"
 import { QuickSettingOption } from "./quick-setting-option"
-import { set } from "date-fns"
 
 interface QuickSettingsProps {}
 
@@ -217,7 +216,7 @@ export const QuickSettings: FC<QuickSettingsProps> = ({}) => {
             ))}
 
           {loading ? (
-            <div className="animate-pulse">Loading assistant...</div>
+            <div className="animate-pulse">{t("Loading assistant...")}</div>
           ) : (
             <>
               <div className="overflow-hidden text-ellipsis">

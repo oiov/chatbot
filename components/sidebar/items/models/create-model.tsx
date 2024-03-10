@@ -5,6 +5,7 @@ import { ChatbotUIContext } from "@/context/context"
 import { MODEL_NAME_MAX } from "@/db/limits"
 import { TablesInsert } from "@/supabase/types"
 import { FC, useContext, useState } from "react"
+import { useTranslation } from "react-i18next"
 
 interface CreateModelProps {
   isOpen: boolean
@@ -12,6 +13,7 @@ interface CreateModelProps {
 }
 
 export const CreateModel: FC<CreateModelProps> = ({ isOpen, onOpenChange }) => {
+  const { t } = useTranslation()
   const { profile, selectedWorkspace } = useContext(ChatbotUIContext)
 
   const [isTyping, setIsTyping] = useState(false)
@@ -45,16 +47,13 @@ export const CreateModel: FC<CreateModelProps> = ({ isOpen, onOpenChange }) => {
       renderInputs={() => (
         <>
           <div className="space-y-1.5 text-sm">
-            <div>Create a custom model.</div>
+            <div>{t("Create a custom model")}.</div>
 
-            <div>
-              Your API <span className="font-bold">*must*</span> be compatible
-              with the OpenAI SDK.
-            </div>
+            <div>{t("Your API must be compatible with the OpenAI SDK")}.</div>
           </div>
 
           <div className="space-y-1">
-            <Label>Name</Label>
+            <Label>{t("Name")}</Label>
 
             <Input
               placeholder="Model name..."
@@ -68,7 +67,7 @@ export const CreateModel: FC<CreateModelProps> = ({ isOpen, onOpenChange }) => {
             <Label>Model ID</Label>
 
             <Input
-              placeholder="Model ID..."
+              placeholder="Model ID... (eg: gpt-4)"
               value={modelId}
               onChange={e => setModelId(e.target.value)}
             />
@@ -78,7 +77,7 @@ export const CreateModel: FC<CreateModelProps> = ({ isOpen, onOpenChange }) => {
             <Label>Base URL</Label>
 
             <Input
-              placeholder="Base URL..."
+              placeholder="Base URL... (eg: https://api.openai.com/v1)"
               value={baseUrl}
               onChange={e => setBaseUrl(e.target.value)}
             />

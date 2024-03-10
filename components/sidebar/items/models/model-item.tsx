@@ -5,12 +5,14 @@ import { Tables, TablesUpdate } from "@/supabase/types"
 import { IconSparkles } from "@tabler/icons-react"
 import { FC, useState } from "react"
 import { SidebarItem } from "../all/sidebar-display-item"
+import { useTranslation } from "react-i18next"
 
 interface ModelItemProps {
   model: Tables<"models">
 }
 
 export const ModelItem: FC<ModelItemProps> = ({ model }) => {
+  const { t } = useTranslation()
   const [isTyping, setIsTyping] = useState(false)
 
   const [apiKey, setApiKey] = useState(model.api_key)
@@ -39,7 +41,7 @@ export const ModelItem: FC<ModelItemProps> = ({ model }) => {
       renderInputs={() => (
         <>
           <div className="space-y-1">
-            <Label>Name</Label>
+            <Label>{t("Name")}</Label>
 
             <Input
               placeholder="Model name..."
@@ -53,7 +55,7 @@ export const ModelItem: FC<ModelItemProps> = ({ model }) => {
             <Label>Model ID</Label>
 
             <Input
-              placeholder="Model ID..."
+              placeholder="Model ID...(eg: gpt-4)"
               value={modelId}
               onChange={e => setModelId(e.target.value)}
             />
@@ -63,13 +65,13 @@ export const ModelItem: FC<ModelItemProps> = ({ model }) => {
             <Label>Base URL</Label>
 
             <Input
-              placeholder="Base URL..."
+              placeholder="Base URL... (eg: https://api.openai.com/v1)"
               value={baseUrl}
               onChange={e => setBaseUrl(e.target.value)}
             />
 
             <div className="pt-1 text-xs italic">
-              Your API must be compatible with the OpenAI SDK.
+              {t("Your API must be compatible with the OpenAI SDK")}.
             </div>
           </div>
 

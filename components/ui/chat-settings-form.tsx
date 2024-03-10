@@ -19,6 +19,7 @@ import {
 import { Slider } from "./slider"
 import { TextareaAutosize } from "./textarea-autosize"
 import { WithTooltip } from "./with-tooltip"
+import { useTranslation } from "react-i18next"
 
 interface ChatSettingsFormProps {
   chatSettings: ChatSettings
@@ -33,6 +34,7 @@ export const ChatSettingsForm: FC<ChatSettingsFormProps> = ({
   useAdvancedDropdown = true,
   showTooltip = true
 }) => {
+  const { t } = useTranslation()
   const { profile, models } = useContext(ChatbotUIContext)
 
   if (!profile) return null
@@ -40,7 +42,7 @@ export const ChatSettingsForm: FC<ChatSettingsFormProps> = ({
   return (
     <div className="space-y-3">
       <div className="space-y-1">
-        <Label>Model</Label>
+        <Label>{t("Model")}</Label>
 
         <ModelSelect
           selectedModelId={chatSettings.model}
@@ -51,7 +53,7 @@ export const ChatSettingsForm: FC<ChatSettingsFormProps> = ({
       </div>
 
       <div className="space-y-1">
-        <Label>Prompt</Label>
+        <Label>{t("Prompt")}</Label>
 
         <TextareaAutosize
           className="bg-background border-input border-2"

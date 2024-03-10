@@ -84,6 +84,7 @@ import { FC, useContext, useEffect, useRef, useState } from "react"
 import profile from "react-syntax-highlighter/dist/esm/languages/hljs/profile"
 import { toast } from "sonner"
 import { SidebarDeleteItem } from "./sidebar-delete-item"
+import { useTranslation } from "react-i18next"
 
 interface SidebarUpdateItemProps {
   isTyping: boolean
@@ -115,6 +116,8 @@ export const SidebarUpdateItem: FC<SidebarUpdateItemProps> = ({
     setModels,
     setAssistantImages
   } = useContext(ChatbotUIContext)
+
+  const { t } = useTranslation()
 
   const buttonRef = useRef<HTMLButtonElement>(null)
 
@@ -641,14 +644,15 @@ export const SidebarUpdateItem: FC<SidebarUpdateItemProps> = ({
         <div className="grow overflow-auto">
           <SheetHeader>
             <SheetTitle className="text-2xl font-bold">
-              Edit {contentType.slice(0, -1)}
+              {t("Edit")}
+              {t(contentType.slice(0, -1))}
             </SheetTitle>
           </SheetHeader>
 
           <div className="mt-4 space-y-3">
             {workspaces.length > 1 && (
               <div className="space-y-1">
-                <Label>Assigned Workspaces</Label>
+                <Label>{t("Assigned Workspaces")}</Label>
 
                 <AssignWorkspaces
                   selectedWorkspaces={selectedWorkspaces}
@@ -666,11 +670,11 @@ export const SidebarUpdateItem: FC<SidebarUpdateItemProps> = ({
 
           <div className="flex grow justify-end space-x-2">
             <Button variant="outline" onClick={() => setIsOpen(false)}>
-              Cancel
+              {t("Cancel")}
             </Button>
 
             <Button ref={buttonRef} onClick={handleUpdate}>
-              Save
+              {t("Save")}
             </Button>
           </div>
         </SheetFooter>
