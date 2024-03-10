@@ -1,5 +1,6 @@
+"use client"
 import { cn } from "@/lib/utils"
-import { FC } from "react"
+import { FC, useEffect } from "react"
 import ReactTextareaAutosize from "react-textarea-autosize"
 
 interface TextareaAutosizeProps {
@@ -33,6 +34,12 @@ export const TextareaAutosize: FC<TextareaAutosizeProps> = ({
   onCompositionStart = () => {},
   onCompositionEnd = () => {}
 }) => {
+  useEffect(() => {
+    if (textareaRef?.current) {
+      textareaRef.current.style.maxHeight = "184px"
+    }
+  }, [textareaRef?.current])
+
   return (
     <ReactTextareaAutosize
       ref={textareaRef}
