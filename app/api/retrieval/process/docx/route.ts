@@ -56,7 +56,7 @@ export async function POST(req: Request) {
       })
     } else {
       openai = new OpenAI({
-        apiKey: profile.openai_api_key || "",
+        apiKey: profile.openai_embedding_api_key || "",
         organization: profile.openai_organization_id
       })
     }

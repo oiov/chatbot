@@ -1136,6 +1136,7 @@ export interface Database {
       }
       profiles: {
         Row: {
+          openai_embedding_api_key: string | null
           anthropic_api_key: string | null
           azure_openai_35_turbo_id: string | null
           azure_openai_45_turbo_id: string | null
