@@ -50,6 +50,7 @@ function addApiKeysToProfile(profile: Tables<"profiles">) {
 
     [VALID_ENV_KEYS.OPENAI_EMBEDDING_API_KEY]: "openai_embedding_api_key",
     [VALID_ENV_KEYS.OPENAI_EMBEDDING_BASE_URL]: "openai_embedding_base_url",
+    [VALID_ENV_KEYS.ANTHROPIC_BASE_URL]: "anthropic_base_url",
 
     [VALID_ENV_KEYS.OPENAI_ORGANIZATION_ID]: "openai_organization_id",
 

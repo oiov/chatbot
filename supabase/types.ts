@@ -1136,6 +1136,7 @@ export interface Database {
       }
       profiles: {
         Row: {
+          anthropic_base_url: string | null
           openai_embedding_base_url: string | null
           openai_embedding_api_key: string | null
           anthropic_api_key: string | null
