@@ -43,6 +43,7 @@ export async function POST(request: Request) {
       })
     } else {
       openai = new OpenAI({
+        baseURL: profile.openai_embedding_base_url || "",
         apiKey: profile.openai_embedding_api_key || "",
         organization: profile.openai_organization_id
       })
