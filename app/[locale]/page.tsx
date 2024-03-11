@@ -28,10 +28,17 @@ export default function HomePage() {
         <div className="flex items-center space-x-8">
           <div className="flex space-x-4">
             <a
+              className="cursor-pointer p-2 font-semibold hover:opacity-50"
+              href="https://dev.yesmore.cc"
+              target="_blank"
+            >
+              {t("Blog")}
+            </a>
+            <a
               className="text-md border-primary bg-primary text-secondary flex h-[36px] w-[90px] cursor-pointer items-center justify-center rounded-lg border-2 p-2 font-semibold hover:opacity-50"
               href="login"
             >
-              {t("Login")}
+              {t("Join")}
             </a>
           </div>
         </div>

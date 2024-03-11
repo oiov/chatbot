@@ -89,5 +89,7 @@
   "Are you sure you want to delete this chat?": "确定要删除这个对话吗？",
   "Are you sure you want to delete": "确定要删除",
   "Type the name of this workspace to confirm": "输入工作区名称以确认删除",
-  "WARNING: Deleting a workspace will delete all of its data.": "警告：删除工作区将删除其所有数据。"
+  "WARNING: Deleting a workspace will delete all of its data.": "警告：删除工作区将删除其所有数据。",
+  "Blog": "博客",
+  "Join": "开始"
 }
