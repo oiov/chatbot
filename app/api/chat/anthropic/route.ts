@@ -25,8 +25,15 @@ export async function POST(request: Request) {
       baseURL: profile.anthropic_base_url || ""
     })
 
+    console.log(profile.anthropic_api_key, profile.anthropic_base_url)
+
     const response = await anthropic.messages.create({
-      model: chatSettings.model,
+      model:
+        chatSettings.model === "claude-2.1"
+          ? "claude-2"
+          : chatSettings.model === "claude-instant-1.2"
+            ? "claude-instant-1"
+            : chatSettings.model,
       messages: ANTHROPIC_FORMATTED_MESSAGES,
       temperature: chatSettings.temperature,
       system: messages[0].content,
@@ -39,6 +46,8 @@ export async function POST(request: Request) {
 
     return new StreamingTextResponse(stream)
   } catch (error: any) {
+    console.log("Anthropic error:", error)
+
     let errorMessage = error.message || "An unexpected error occurred"
     const errorCode = error.status || 500
 
