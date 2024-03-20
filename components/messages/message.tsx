@@ -238,14 +238,6 @@ export const Message: FC<MessageProps> = ({
                     }
                   />
                 )
-              ) : profile?.image_url ? (
-                <Image
-                  className={`size-[32px] rounded`}
-                  src={profile?.image_url}
-                  height={32}
-                  width={32}
-                  alt="user image"
-                />
               ) : (
                 <IconMoodSmile
                   className="bg-primary text-secondary border-primary rounded border-[1px] p-1"
