@@ -29,6 +29,13 @@ export default function HomePage() {
           <div className="flex space-x-4">
             <a
               className="cursor-pointer p-2 font-semibold hover:opacity-50"
+              href="https://status.vmail.dev"
+              target="_blank"
+            >
+              Status
+            </a>
+            <a
+              className="cursor-pointer p-2 font-semibold hover:opacity-50"
               href="https://dev.yesmore.cc"
               target="_blank"
             >
