@@ -28,8 +28,7 @@ module.exports = withBundleAnalyzer(
     experimental: {
       serverComponentsExternalPackages: ["sharp", "onnxruntime-node"],
       serverActions: {
-        // allowedForwardedHosts: ["localhost", "ai.oihub.cc"],
-        allowedOrigins: ["localhost:3000", "ai.oihub.cc"]
+        allowedOrigins: ["localhost:3000", "ai.oihub.cc", "chat.vmail.dev"]
       }
     }
   })
