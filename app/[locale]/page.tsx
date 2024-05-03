@@ -57,14 +57,14 @@ export default function HomePage() {
         <div className="mt-2 text-lg font-bold opacity-100 transition-all duration-500 md:mt-6 md:text-2xl">
           {t("Chat with GPT-4 & Gemini.")}
         </div>
-        <div className="mt-2 max-w-[500px] overflow-auto whitespace-normal text-center text-sm font-semibold opacity-100 transition-all duration-500">
-          本站旨在提供国外AI大模型体验，支持 GPT、Gemini Pro、Claude、PERPLEXITY
+        <div className="mt-2 max-w-[500px] overflow-auto whitespace-normal text-center text-sm opacity-100 transition-all duration-500">
+          本站已支持 GPT、Gemini、Claude、PERPLEXITY、Groq
           系列模型，支持多模态文件上传、图片识别，请合理合规使用
         </div>
         <Link
           href="https://dev.yesmore.cc/articles/llk"
           target="_blank"
-          className="mt-2 text-center text-sm text-blue-400"
+          className="mt-2 text-center text-sm text-blue-500"
         >
           #️⃣ 29元月租 185G 大流量卡免费领
         </Link>
