@@ -81,7 +81,7 @@ export const CHAT_SETTING_LIMITS: Record<LLMID, ChatSettingLimits> = {
   },
 
   // GROQ MODELS
-  "llama2-70b-4096": {
+  "llama3-70b-8192": {
     MIN_TEMPERATURE: 0.0,
     MAX_TEMPERATURE: 1.0,
     MAX_TOKEN_OUTPUT_LENGTH: 4096,
@@ -93,7 +93,18 @@ export const CHAT_SETTING_LIMITS: Record<LLMID, ChatSettingLimits> = {
     MAX_TOKEN_OUTPUT_LENGTH: 4096,
     MAX_CONTEXT_LENGTH: 32768
   },
-
+  "llama3-8b-8192": {
+    MIN_TEMPERATURE: 0.0,
+    MAX_TEMPERATURE: 1.0,
+    MAX_TOKEN_OUTPUT_LENGTH: 4096,
+    MAX_CONTEXT_LENGTH: 32768
+  },
+  "gemma-7b-it": {
+    MIN_TEMPERATURE: 0.0,
+    MAX_TEMPERATURE: 1.0,
+    MAX_TOKEN_OUTPUT_LENGTH: 4096,
+    MAX_CONTEXT_LENGTH: 32768
+  },
   // OPENAI MODELS
   "gpt-3.5-turbo": {
     MIN_TEMPERATURE: 0.0,
