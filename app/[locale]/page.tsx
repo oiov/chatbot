@@ -58,8 +58,7 @@ export default function HomePage() {
           {t("Chat with GPT-4 & Gemini.")}
         </div>
         <div className="mt-2 max-w-[500px] overflow-auto whitespace-normal text-center text-sm font-semibold opacity-100 transition-all duration-500">
-          本站旨在提供免费的国外AI大模型体验，支持 GPT、Gemini
-          Pro、Claude、PERPLEXITY
+          本站旨在提供国外AI大模型体验，支持 GPT、Gemini Pro、Claude、PERPLEXITY
           系列模型，支持多模态文件上传、图片识别，请合理合规使用
         </div>
         <Link
