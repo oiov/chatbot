@@ -62,6 +62,13 @@ export default function HomePage() {
           系列模型，支持多模态文件上传、图片识别，请合理合规使用
         </div>
         <Link
+          href="https://im.vmail.dev/invite/BO91jwnd"
+          target="_blank"
+          className="mt-3 text-center text-sm text-yellow-500"
+        >
+          📢 点击加入 OhMyGPT 共享 AI 频道
+        </Link>
+        <Link
           href="https://dev.yesmore.cc/articles/llk"
           target="_blank"
           className="mt-2 text-center text-sm text-blue-500"
